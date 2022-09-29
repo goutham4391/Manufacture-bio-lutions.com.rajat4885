@@ -1,0 +1,146 @@
+body.no_scroll {
+    overflow: hidden!important;
+}
+
+.popup_overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255, 1);
+    display: none;
+    z-index: 9999;
+}
+.popup_wrapper-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+    
+}
+.popup_wrapper {
+    box-sizing: border-box;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.popup_wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+@media(max-width: 992px) {
+    .popup_wrapper {
+        padding: 35px;
+        max-width: 75%;
+    }
+}
+@media(max-width: 992px) {
+    .popup_wrapper {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
+.popup_title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: none;
+    letter-spacing: 0em;
+    line-height: 1em;
+    height: 100%;
+}
+.popup_text {
+    margin: 0 0 10px 0;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12.5px;
+    line-height: 1.4em;
+}
+
+.popup_close {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+.popup_close:active,
+.popup_close:focus {
+    outline: none;
+}
+.popup_close.icon {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: rgba(255,255,255,1);
+    width: 55px;
+    height: 55px;
+    z-index: 999;
+}
+.popup_close.icon:before {
+    content: '×';
+    font-size: 26px;
+    line-height: 1em;
+    border: none;
+    opacity: 0.8;
+    transition: opacity 400ms;
+}
+.popup_close.icon:after {
+    display: block;
+    content: 'close';
+    font-size: 14px;
+    line-height: 1em;
+    border: none;
+    opacity: 0.8;
+    transition: opacity 400ms;
+}
+.popup_close.icon:hover:before  {
+    opacity: 1;
+    transition: opacity 400ms;
+}
+
+.popup_footer {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup_close.btn {
+    padding: 1.4em 2.5em;
+    box-sizing: border-box;
+    display: block;
+    color: #fff;
+    background-color: #000;
+    border: 4px solid #000;
+    transition: all 400ms;
+}
+.popup_close.btn:hover {
+    border-color: #000;
+    color: #000;
+    background-color: #fff;
+    transition: all 400ms;
+}
+.popup_wrapper video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+.avia-button.popup_close_big {
+    position: absolute;
+    bottom: 130px;
+    z-index: 999;
+    cursor: pointer;
+    background: #bdc734 !important;
+    color: white;
+    border: none;
+    font-size: 24px !important;
+    left: 50%;
+    transform: translate(-50%,0%);
+    outline: 0;
+}
